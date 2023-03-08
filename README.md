@@ -1,19 +1,16 @@
-# Assignment 4: The Game of Life
-Name: Asher Etherington\
-Cruz ID: aetherin\
-Class: CSE13s
+# The Game of Life
 
 ## Description:
 This program runs a 'Game of Life' simulation on a grid/matrix. The 'Game of Life' was originally created\
 by the English Mathematician John Horton Conway. The game is supposed to simulate how much life can evolve\
 and change over time. The game works with a grid of squares in which each square, or cell, interacts with \
 its neighbors throughout each iteration in a way defined by a simple set of rules. The rules for each iteration\
-are;any live cell with two or three live neighbors survives, any dead cell with exactly 3 live neighbors becomes a\
+are; any live cell with two or three live neighbors survives, any dead cell with exactly 3 live neighbors becomes a\
 live cell, and all other cells die. This game only takes input in the beginning and after that runs completely on its\
 own until he set number of iterations is complete.
 
 ## Build:
-To build this program simply download all files and enter that directory within a terminal and use the $ make or \
+To build this program simply download all files and enter that directory within a Unix terminal and use the $ make or \
 $ make all command. This will create the 'life' executable.
 
 ## Run:
