@@ -22,7 +22,6 @@ To clean the directory of all executable run the command $ make clean.
 
 ## Available Command Line Arguments
 
-• -t : Specify that the Game of Life is to be played on a toroidal universe.\
 • -s : Silence ncurses. Enabling this option means that nothing will be displayed by ncurses.\
 • -n generations : Specify the number of generations that the universe goes through. The default number of generations is 100.\
 • -i input : Specify the input file to read in order to populate the universe. By default the input is stdin.\
