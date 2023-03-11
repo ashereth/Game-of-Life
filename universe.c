@@ -66,7 +66,7 @@ bool uv_get_cell(Universe *u, uint32_t r, uint32_t c) {
     return false;
 }
 
-bool uv_populate(Universe *u, FILE *infile) { //may need to reduce column numbers in final
+bool uv_populate(Universe *u, FILE *infile) { 
     if (infile == NULL) {
         printf("error");
         return false;
@@ -75,7 +75,7 @@ bool uv_populate(Universe *u, FILE *infile) { //may need to reduce column number
     int column = 0; //counter to see what column of file we are on
     while (fscanf(infile, "%u", &new) != EOF) { //get contents of file until at EOF
         ++column; //iterate counter
-        if (column == 1) { //start doing stuff at 3 because we want to skip the first line of file
+        if (column == 1) { 
             if (new > u->rows) { //make sure the row is in bounds
                 printf("row is out of bounds\n");
                 return false;
@@ -94,7 +94,7 @@ bool uv_populate(Universe *u, FILE *infile) { //may need to reduce column number
     }
     return true;
 }
-//got code for this function from TA John Yu
+
 uint32_t isNeighbor(Universe *u, uint32_t r, uint32_t c) {
     if (r > 0 && r <= u->rows - 1 && c <= u->cols - 1) {
         return u->grid[r][c];
@@ -107,7 +107,6 @@ uint32_t uv_census(Universe *u, uint32_t r, uint32_t c) {
     if (u->toroidal) {
         return neighbors;
     }
-    //code for non toroidal universe from TA John Yu
     else {
         for (int row = -1; row <= 1; row++) {
             for (int col = -1; col <= 1; col++) {
